@@ -17,13 +17,9 @@ public class MessageCodesResolverTest {
 
     @Test
     void messageCodesResolverField() {
-        String[] messageCodes = codesResolver.resolveMessageCodes("required",
-                "item", "itemName", String.class);
+        String[] messageCodes = codesResolver.resolveMessageCodes("required","item", "itemName", String.class);
         assertThat(messageCodes).containsExactly(
-                "required.item.itemName",
-                "required.itemName",
-                "required.java.lang.String",
-                "required"
+                "required.item.itemName", "required.itemName", "required.java.lang.String", "required"
         );
     }
 }
